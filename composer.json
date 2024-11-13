@@ -1,6 +1,21 @@
 {
     "name": "slvler/brave-search-api",
+    "description": "Brave search api API wrapper for Laravel",
+    "keywords": [
+        "brave",
+        "search",
+        "laravel",
+        "php"
+    ],
+    "homepage": "https://github.com/slvler/brave-search-api",
     "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "slvler",
+            "email": "slvler@proton.me"
+        }
+    ],
     "require": {
         "illuminate/support": "^10.0"
     },
@@ -24,6 +39,6 @@
             }
         }
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true
 }
