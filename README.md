@@ -25,7 +25,14 @@ composer require slvler/brave-search-api
 Brave::web(['q' => "bitcoin"])->result();
 ```
 
-## Credits
+### Credits
 
 - [slvler](https://github.com/slvler)
 
+### License
+
+The MIT License (MIT). Please see [License File](https://github.com/slvler/brave-search-api/blob/main/LICENSE.md) for more information.
+
+### Contributing
+You're very welcome to contribute.
+Please see [CONTRIBUTING](https://github.com/slvler/brave-search-api/blob/main/CONTRIBUTING.md) for details.
