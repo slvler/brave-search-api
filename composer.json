@@ -1,0 +1,29 @@
+{
+    "name": "slvler/brave-search-api",
+    "license": "MIT",
+    "require": {
+        "illuminate/support": "^10.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.18",
+        "phpunit/phpunit": "^10.5",
+        "friendsofphp/php-cs-fixer": "^3.64"
+    },
+    "autoload": {
+        "psr-4": {
+            "Slvler\\Brave\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Slvler\\Brave\\BraveServiceProvider"
+            ],
+            "aliases": {
+                "Brave": "Slvler\\Brave\\Facades\\Brave"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
