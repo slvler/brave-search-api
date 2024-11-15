@@ -52,6 +52,5 @@
             "@php artisan key:generate --ansi"
         ]
     },
-    "minimum-stability": "dev",
     "prefer-stable": true
 }
