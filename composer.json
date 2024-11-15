@@ -7,11 +7,17 @@
     "require-dev": {
         "orchestra/testbench": "^8.18",
         "phpunit/phpunit": "^10.5",
-        "friendsofphp/php-cs-fixer": "^3.64"
+        "friendsofphp/php-cs-fixer": "^3.64",
+        "guzzlehttp/guzzle": "^7.9"
     },
     "autoload": {
         "psr-4": {
             "Slvler\\Brave\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Slvler\\Brave\\Tests\\": "tests/"
         }
     },
     "extra": {
@@ -23,6 +29,12 @@
                 "Brave": "Slvler\\Brave\\Facades\\Brave"
             }
         }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit tests",
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ]
     },
     "minimum-stability": "dev",
     "prefer-stable": true

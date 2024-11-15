@@ -11,9 +11,9 @@ return [
     |
     */
     'client' => [
-        'base_url' => env('BRAVE_BASE_URL'),
-        'version' => env('BRAVE_API_VERSION'),
-        'api_key' => env('BRAVE_API_KEY')
+        'base_url' => env('BRAVE_BASE_URL', 'https://api.search.brave.com'),
+        'version' => env('BRAVE_API_VERSION', ''),
+        'api_key' => env('BRAVE_API_KEY', '')
     ],
 
     /*
