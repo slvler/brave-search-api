@@ -1,9 +1,9 @@
 # Brave Web Search API
 [![tests](https://github.com/slvler/brave-search-api/actions/workflows/tests.yml/badge.svg)](https://github.com/slvler/brave-search-api)
-[![Latest Stable Version](http://poser.pugx.org/slvler/brave-search-api/v)](https://packagist.org/packages/slvler/brave-search-api)
-[![Latest Unstable Version](http://poser.pugx.org/slvler/brave-search-api/v/unstable)](https://packagist.org/packages/slvler/brave-search-api)
-[![License](http://poser.pugx.org/slvler/brave-search-api/license)](https://packagist.org/packages/slvler/brave-search-api)
-[![Total Downloads](http://poser.pugx.org/slvler/brave-search-api/downloads)](https://packagist.org/packages/slvler/brave-search-api)
+[![Latest Stable Version](https://poser.pugx.org/slvler/brave-search-api/v)](https://packagist.org/packages/slvler/brave-search-api)
+[![Latest Unstable Version](https://poser.pugx.org/slvler/brave-search-api/v/unstable)](https://packagist.org/packages/slvler/brave-search-api)
+[![License](https://poser.pugx.org/slvler/brave-search-api/license)](https://packagist.org/packages/slvler/brave-search-api)
+[![Total Downloads](https://poser.pugx.org/slvler/brave-search-api/downloads)](https://packagist.org/packages/slvler/brave-search-api)
 
 ### Introduction
 Brave Web Search API is a REST API to query Brave Search and get back search results from the web. The following sections describe how to curate requests, including parameters and headers, to Brave Web Search API and get a JSON response back.
