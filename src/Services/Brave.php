@@ -16,18 +16,16 @@ class Brave extends BraveApiWrapper
     public $response;
     public function __construct(Container $app)
     {
-        $apiKey = $app['config']->get('brave.client.api_key');
-
+        $apiKey = $app["config"]->get("brave.client.api_key");
 
         if (empty($apiKey) || !isset($apiKey)) {
             throw MissingApiKey::create();
         }
 
-        $baseURL = $app['config']->get('brave.client.base_url');
-
+        $baseURL = $app["config"]->get("brave.client.base_url");
 
         if (empty($baseURL) || !isset($baseURL)) {
-            throw new InvalidArgumentException('Invalid Brave API base URL.');
+            throw new InvalidArgumentException("Invalid Brave API base URL.");
         }
         parent::__construct($baseURL, $apiKey);
     }
@@ -36,11 +34,30 @@ class Brave extends BraveApiWrapper
     {
         $replace = (new BaseQuery($params))->setProperty()->toResponse();
 
-         $this->response = $this->getHttpClient()->request('GET','/res/v1/web/search', [
-            'query' => $replace
-        ]);
+        $this->response = $this->getHttpClient()->request(
+            "GET",
+            "/res/v1/web/search",
+            [
+                "query" => $replace,
+            ]
+        );
         return $this;
     }
+
+    public function image($params)
+    {
+        $replace = (new BaseQuery($params))->setProperty()->toResponse();
+
+        $this->response = $this->getHttpClient()->request(
+            "GET",
+            "/res/v1/images/search",
+            [
+                "query" => $replace,
+            ]
+        );
+        return $this;
+    }
+
     public function result()
     {
         $data = new Response($this->response);

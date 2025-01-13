@@ -1,7 +1,6 @@
 # Brave Web Search API
 [![tests](https://github.com/slvler/brave-search-api/actions/workflows/tests.yml/badge.svg)](https://github.com/slvler/brave-search-api)
-[![Latest Stable Version](https://poser.pugx.org/slvler/brave-search-api/v)](https://packagist.org/packages/slvler/brave-search-api)
-[![Latest Unstable Version](https://poser.pugx.org/slvler/brave-search-api/v/unstable)](https://packagist.org/packages/slvler/brave-search-api)
+[![Latest Stable Version](https://img.shields.io/packagist/v/slvler/brave-search-api.svg)](https://packagist.org/packages/slvler/brave-search-api)
 [![License](https://poser.pugx.org/slvler/brave-search-api/license)](https://packagist.org/packages/slvler/brave-search-api)
 [![Total Downloads](https://poser.pugx.org/slvler/brave-search-api/downloads)](https://packagist.org/packages/slvler/brave-search-api)
 
@@ -9,17 +8,16 @@
 Brave Web Search API is a REST API to query Brave Search and get back search results from the web. The following sections describe how to curate requests, including parameters and headers, to Brave Web Search API and get a JSON response back.
 This package provides a convenient wrapper to the [Brave Web Search API](https://api.search.brave.com/app/documentation/web-search/get-started)  for Laravel applications.
 
-### Requirements
-- PHP 8.0+
-- Laravel 10.x
+## Requirements
+- PHP 8.2
+- Laravel 9.x | 10.x | 11.x
 
-### Installation
+## Installation
 To install this package tou can use composer:
 ```bash
 composer require slvler/brave-search-api
 ```
-
-### Usage
+## Usage
 - First, you should extract the config/brave.php file to the config folder.
 ```bash
 php artisan vendor:publish --tag=brave
@@ -29,7 +27,6 @@ php artisan vendor:publish --tag=brave
 BRAVE_BASE_URL="https://api.search.brave.com"
 BRAVE_API_KEY=
 ```
-
 #### Web text search
 - You can use it to search on brave api:
 ```php
@@ -37,18 +34,21 @@ use Slvler\Brave\Facades\Brave;
 
 Brave::web(['q' => "bitcoin"])->result();
 ```
+#### Image Search
+```php
+use Slvler\Brave\Facades\Brave;
+
+Brave::image(['q' => "munich", "safesearch" => "strict"])->result();
+```
 
 ### Testing
 ```bash
 composer test
 ```
-
-### Credits
+## Credits
 - [slvler](https://github.com/slvler)
-
-### License
+## License
 The MIT License (MIT). Please see [License File](https://github.com/slvler/brave-search-api/blob/main/LICENSE.md) for more information.
-
-### Contributing
+## Contributing
 You're very welcome to contribute.
 Please see [CONTRIBUTING](https://github.com/slvler/brave-search-api/blob/main/CONTRIBUTING.md) for details.
